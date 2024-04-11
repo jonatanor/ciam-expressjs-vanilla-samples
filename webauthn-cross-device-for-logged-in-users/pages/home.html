@@ -111,7 +111,9 @@
           window.pageUtils.show('qrDiv');
           window.pageUtils.hide('spinner');
         };
-        qrImg.src = `https://chart.googleapis.com/chart?cht=qr&chl=${url}&chs=220x220`;
+        //qrImg.src = `https://chart.googleapis.com/chart?cht=qr&chl=${url}&chs=220x220`;
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${url}`;
+
       }
 
       async function getRegistrationTicket() {
